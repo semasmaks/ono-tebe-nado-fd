@@ -72,6 +72,7 @@
 .cover__overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -79,7 +80,7 @@
   background: rgb(0 0 0/0.6);
 }
 
-.title {
+.cover__title {
   display: block;
   color: #fff;
   font-family: Raleway;
@@ -90,13 +91,13 @@
   text-transform: uppercase;
 }
 
-.title__center {
+.cover__title-center-aligned {
   display: block;
   margin-right: -30px;
   text-align: center;
 }
 
-.title__right {
+.cover__title-right-aligned {
   display: block;
   margin-right: -30px;
   text-align: right;
@@ -155,23 +156,14 @@
   text-transform: uppercase;
 }
 
-.lots__see-more {
-  margin-left: 40px;
-  font-family: Raleway;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: 0;
-}
-
-.lots-section {
+.lots__section {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
   margin-bottom: 33px;
 }
 
-.lot-card {
+.lot__card {
   position: relative;
   display: inline-block;
   gap: 25px;
@@ -179,9 +171,10 @@
   height: 596px;
 }
 
-.lots__overlay {
+.lots__card-overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -189,7 +182,7 @@
   background: rgb(0 0 0/0.6);
 }
 
-.lot-card__title {
+.lot__card-title {
   color: #fff;
   font-family: Raleway;
   font-weight: 700;
@@ -198,10 +191,12 @@
   letter-spacing: 0;
   text-decoration: underline;
   text-decoration-style: solid;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
   text-transform: uppercase;
 }
 
-.lot__description {
+.lot__card-description {
   color: #fff;
   font-family: Raleway;
   font-weight: 400;
@@ -211,22 +206,31 @@
   text-overflow: ellipsis;
 }
 
-.lot-card-film {
+.lot__card-film {
   background-image: url(../images/card-lot-01.jpg);
   background-position: center;
   background-size: cover;
 }
 
-.lot-card-book {
+.lot__card-book {
   background-image: url(../images/card-lot-02.jpg);
   background-position: center;
   background-size: cover;
 }
 
-.lot-card-painting {
+.lot__card-painting {
   background-image: url(../images/card-lot-03.jpg);
   background-position: center;
   background-size: cover;
+}
+
+.lots__see-more {
+  margin-left: 40px;
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0;
 }
 
 /* конец стилей лотов */
@@ -302,10 +306,12 @@
   font-size: 18px;
   font-style: normal;
   line-height: 24.3px;
+  text-underline-offset: 4px;
 }
 
 .footer__menu {
   justify-self: center;
+  margin-top: 2px;
   line-height: 130%;
   text-align: center;
   list-style: none;
